@@ -1,0 +1,501 @@
+@charset "utf-8";
+@import url("https://use.typekit.net/npi1rur.css");
+@import url("https://webfontworld.github.io/score/SCoreDream.css");
+@import url(default.css);
+
+*::selection {
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+*::-moz-selection {
+    /* 호환성을 위한 코드 */
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+html,
+body {
+    font-family:
+        "neuzeit-grotesk",
+        "SCoreDream",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+    font-size: 15px;
+    color: #1d1d1d;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.04rem;
+    word-break: break-all;
+    container-type: inline-size;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+#wrap {
+    width: 90%;
+    overflow: hidden;
+}
+
+@media screen and (width > 1024px) {
+    .wrapper {
+        width: auto;
+        /* 모바일에서는 홈페이지의 넓이를 제한하면 안됨
+           디바이스의 넓이에 맞춰서 꽉차게 나와야 하기 때문에
+           그 안쪽으로 좌우 여백이 20px씩 들어가게 함. */
+        margin: 0 20px;
+    }
+}
+
+/*media*/
+@media screen and (width < 1025px) {
+
+    html,
+    body {
+        font-size: 0.86rem;
+    }
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header.menu_over {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    content: "";
+}
+
+.header.menu_over::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px) grayscale(40%);
+    content: "";
+}
+
+.header .logo {
+    margin: 30px 0 0 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+.header .logo a {
+    width: 200px;
+    height: 45px;
+    display: block;
+    background: url(../images/logo.svg) no-repeat center center / cover;
+}
+
+.header .gnb_close,
+.header .gnb_open {
+    display: none;
+}
+
+.header .gnb ul.depth1 {
+    display: flex;
+}
+
+.header .gnb ul.depth1>li>a {
+    line-height: 100px;
+    padding: 0 40px;
+    font-size: 22px;
+    position: relative;
+}
+
+.header .gnb ul.depth1>li>a:hover {
+    color: #f28749;
+    font-weight: 700;
+}
+
+.header .gnb ul.depth1>li:has(.depth2)>a::after {
+    position: absolute;
+    top: calc(130%);
+    left: calc(45%);
+    width: 17px;
+    height: 2px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18.02' height='2' viewBox='0 0 18.02 2'%3E%3Cg id='구성_요소_1_4' data-name='구성 요소 1 – 4' transform='translate(1 1)'%3E%3Cpath id='패스_43' data-name='패스 43' d='M24,24h.02M16,24h.02M32,24h.02' transform='translate(-16 -24)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: "";
+}
+
+.header .gnb ul.depth2 {
+    display: none;
+    left: auto;
+    top: 120px;
+    text-align: center;
+    backdrop-filter: blur(5px) grayscale(40%);
+    padding: 10px 40px;
+    content: "";
+}
+
+.header .gnb ul.depth2>li>a {
+    display: block;
+    white-space: nowrap;
+    line-height: 40px;
+}
+
+.header .gnb ul.depth2>li>a:hover {
+    color: #f28749;
+    text-decoration: dotted underline;
+    text-underline-position: under;
+    text-underline-offset: 2px;
+}
+
+.header .gnb ul.depth1>li.sub_over>.depth2 {
+    display: block;
+}
+
+.header .gnb ul.depth1>li.sub_over:has(.depth2)>a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18.02' height='2' viewBox='0 0 18.02 2'%3E%3Cg id='구성_요소_1_4' data-name='구성 요소 1 – 4' transform='translate(1 1)'%3E%3Cpath id='패스_43' data-name='패스 43' d='M24,24h.02M16,24h.02M32,24h.02' transform='translate(-16 -24)' fill='none' stroke='%23f28749' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.header .tnb {
+    display: flex;
+    align-items: center;
+}
+
+.header .tnb .paper {
+    position: relative;
+    padding-right: 25px;
+    margin-right: 20px;
+}
+
+.header .tnb .paper::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 15.87 15.87'%3E%3Cpath id='패스_42' data-name='패스 42' d='M14.167,10.111V16.87H2V4.7H8.759M10.787,2H16.87V8.083m-8.787,2.7L16.87,2Z' transform='translate(-1.5 -1.5)' fill='none' stroke='%23fff' stroke-width='1'/%3E%3C/svg%3E");
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-size: contain;
+    content: "";
+}
+
+.header .tnb .search {
+    position: relative;
+    padding-right: 25px;
+}
+
+.header .tnb .search::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.207' height='16.207' viewBox='0 0 16.207 16.207'%3E%3Cpath id='패스_41' data-name='패스 41' d='M21,21l-5-5m1.667-4.167A5.833,5.833,0,1,1,11.833,6,5.834,5.834,0,0,1,17.667,11.833Z' transform='translate(-5.5 -5.5)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/svg%3E");
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-size: contain;
+    content: "";
+}
+
+@media screen and (width > 1024px) {
+    .header .logo a {
+        width: 100%;
+        height: 100%;
+    }
+
+    .header .gnb {
+        width: 62vw;
+    }
+
+    .header .gnb ul.depth1 {
+        font-size: 1rem - 1cqmax;
+    }
+}
+
+@media screen and (width < 1024px) {
+    .header .gnb_wrap {
+        display: none;
+    }
+
+    .header .gnb_close,
+    .header .gnb_open {
+        display: block;
+    }
+}
+
+@media screen and (width < 768px) {
+    .header {
+        margin: 0;
+        height: 50px;
+    }
+
+    .header .logo a {
+        margin: 0;
+        width: 25vw;
+        background: url(../images/logo.svg) no-repeat center center / cover;
+    }
+
+    .header .gnb_wrap {
+        display: none;
+    }
+
+    .header .gnb_close,
+    .header .gnb_open {
+        display: block;
+    }
+
+    .header .gnb ul.depth1 {
+        display: flex;
+    }
+
+    .header .gnb ul.depth1>li>a {
+        line-height: 100px;
+        padding: 0 40px;
+        font-size: 22px;
+        position: relative;
+    }
+
+    .header .gnb ul.depth1>li>a:hover {
+        color: #f28749;
+        font-weight: 700;
+    }
+
+    .header .gnb ul.depth1>li:has(.depth2)>a::after {
+        position: absolute;
+        top: calc(130%);
+        left: calc(45%);
+        width: 17px;
+        height: 2px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18.02' height='2' viewBox='0 0 18.02 2'%3E%3Cg id='구성_요소_1_4' data-name='구성 요소 1 – 4' transform='translate(1 1)'%3E%3Cpath id='패스_43' data-name='패스 43' d='M24,24h.02M16,24h.02M32,24h.02' transform='translate(-16 -24)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        content: "";
+    }
+
+    .header .gnb ul.depth2 {
+        display: none;
+        left: auto;
+        top: 120px;
+        text-align: center;
+        backdrop-filter: blur(5px) grayscale(40%);
+        padding: 10px 40px;
+        content: "";
+    }
+
+    .header .gnb ul.depth2>li>a {
+        display: block;
+        white-space: nowrap;
+        line-height: 40px;
+    }
+
+    .header .gnb ul.depth2>li>a:hover {
+        color: #f28749;
+        text-decoration: dotted underline;
+        text-underline-position: under;
+        text-underline-offset: 2px;
+    }
+
+    .header .gnb ul.depth1>li.sub_over>.depth2 {
+        display: block;
+    }
+
+    .header .gnb ul.depth1>li.sub_over:has(.depth2)>a:hover::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18.02' height='2' viewBox='0 0 18.02 2'%3E%3Cg id='구성_요소_1_4' data-name='구성 요소 1 – 4' transform='translate(1 1)'%3E%3Cpath id='패스_43' data-name='패스 43' d='M24,24h.02M16,24h.02M32,24h.02' transform='translate(-16 -24)' fill='none' stroke='%23f28749' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .header .tnb {
+        display: flex;
+        align-items: center;
+    }
+
+    .header .tnb .paper {
+        position: relative;
+        padding-right: 25px;
+        margin-right: 20px;
+    }
+
+    .header .tnb .paper::before {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 14px;
+        height: 14px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 15.87 15.87'%3E%3Cpath id='패스_42' data-name='패스 42' d='M14.167,10.111V16.87H2V4.7H8.759M10.787,2H16.87V8.083m-8.787,2.7L16.87,2Z' transform='translate(-1.5 -1.5)' fill='none' stroke='%23fff' stroke-width='1'/%3E%3C/svg%3E");
+        background-repeat: no-repeat no-repeat;
+        background-position: center center;
+        background-size: contain;
+        content: "";
+    }
+
+    .header .tnb .search {
+        position: relative;
+        padding-right: 25px;
+    }
+
+    .header .tnb .search::before {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 15px;
+        height: 15px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.207' height='16.207' viewBox='0 0 16.207 16.207'%3E%3Cpath id='패스_41' data-name='패스 41' d='M21,21l-5-5m1.667-4.167A5.833,5.833,0,1,1,11.833,6,5.834,5.834,0,0,1,17.667,11.833Z' transform='translate(-5.5 -5.5)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/svg%3E");
+        background-repeat: no-repeat no-repeat;
+        background-position: center center;
+        background-size: contain;
+        content: "";
+    }
+
+    .header.menu_over {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100px;
+        color: #fff;
+        content: "";
+    }
+
+    .header.menu_over::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px) grayscale(40%);
+        content: "";
+    }
+}
+
+
+.visual h2 {
+    display: none;
+}
+
+.visual .swiper {
+    position: relative;
+    height: 700px
+}
+
+.visual .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.visual_txt {
+    position: absolute;
+    bottom: 5vw;
+    left: 0;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.visual_txt strong {
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 200%;
+}
+
+.swiper_prev {
+    position: absolute;
+    bottom: 5vw;
+    right: 15vw;
+    z-index: 100;
+    width: 42px;
+    height: 42px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='41' height='41' viewBox='0 0 41 41'%3E%3Cg id='사각형_13' data-name='사각형 13' fill='none' stroke='%23fff' stroke-width='1'%3E%3Crect width='41' height='41' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='40' height='40' fill='none'/%3E%3C/g%3E%3Cpath id='패스_49' data-name='패스 49' d='M10,20.876,18.876,12M10,20.876l8.876,8.876M10,20.876H30.711' transform='translate(0.145 -0.376)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    content: "";
+}
+
+.swiper_next {
+    position: absolute;
+    bottom: 5vw;
+    left: calc(50% - 10px);
+    z-index: 100;
+    width: 42px;
+    height: 42px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='41' viewBox='0 0 42 41'%3E%3Cg id='사각형_14' data-name='사각형 14' fill='none' stroke='%23fff' stroke-width='1'%3E%3Crect width='42' height='41' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='41' height='40' fill='none'/%3E%3C/g%3E%3Cpath id='패스_47' data-name='패스 47' d='M30.711,20.876,21.835,12m8.876,8.876-8.876,8.876m8.876-8.876H10' transform='translate(0.645 -0.376)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    content: "";
+}
+
+
+@media screen and (width < 1024px) {
+    .visual .swiper {
+        width: 100%;
+        height: 400px;
+    }
+
+    .visual_txt {
+        font-size: 0.8em;
+    }
+
+    .visual_txt strong {
+        bottom: 5vw;
+        font-size: 1.6em;
+        line-height: 1.5;
+    }
+
+@media screen and (max-width:768px){
+    .visual .swiper { height:400px }
+    .visual .visual_txt {
+        top: 300px;
+        font-size: 30px;
+    }
+    .visual .visual_txt p strong::after {
+        bottom: 0;
+        height: 2px;
+    }
+}
+@media screen and (max-width:500px){
+    .visual .swiper { height:300px }
+    .visual .visual_txt {
+        top: 215px;
+        font-size: 20px;
+    }
+}
+
+.lost {
+    background-color: #0C3B57;
+    color: #fff;
+}
+.lost h2 {
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    padding: 79px 0 36px 0;}

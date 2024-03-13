@@ -1,0 +1,71 @@
+/* 웹폰트 적용하는 방법 - 웹폰트란 이 폰트가 깔려있지 않은 이용자도 폰트가 적용된 형태로 
+보이도록 서비스 하는 방법  */
+@font-face { font-family:'PT'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff'); font-weight:400; font-style:normal; }
+@font-face { font-family:'PT'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff'); font-weight:900; font-style:normal; }
+
+/* 
+    글자의 스타일(서체, 색상, 행간, 자간, 정렬)은 상속이 가능합니다. 
+    기본 글꼴의 스타일 즉, p태그에 정의한 스타일은 
+    전체를 감싸는 body태그에 정의해주고 다른 태그가 상속받게 
+    스타일 줍니다. 
+*/
+body {
+    font-family: 'PT', serif;
+    font-size: 15px; /* 포토샵에서 본 글자크기와 동일값을 px로 주면 됨 (PT아님) */
+    color: #3d3d3d;
+    font-weight: 400;
+    line-height: 1.2; /* 글자크기의 1.2배의 행간 */
+    word-break: keep-all;
+    /* 
+        단어가 줄이 바뀔때 분리되는 현상을 막아주는 기능 
+        즉, "새로운"이라는 글자가 줄이 바뀌면서 
+        새
+        로운
+        이렇게 줄이 바뀌지 않고 한번에 나타나도록 하는 기능
+        단어(띄어쓰기 기준)가 무조건 붙어서 나오는 기능
+    */
+}
+
+.wrapper {
+    width: 1280px; /* 넓이 제한 */
+    margin: 0 auto; /* 브라우저 가운데 정렬 */
+}
+/* 
+    태그 스타일의 초기화 
+    - 브라우저에서 특정태그에 스타일을 주는 경우가 많음 
+      이 스타일을 제거하고 내스타일을 입히는 작업 
+*/
+* { /* *은 와이드카드라고 모든 태그를 뜻함 */
+    padding: 0;
+    margin: 0;
+}
+.g_center {
+    text-align: center;
+}
+.g_center h1 {
+    font-size: 40px;
+    color: #1d1d1d;
+    font-weight: 900;
+    margin: 68px 0 19px 0; /* 위 - 오른쪽 - 아래 - 왼쪽 (시계방향) */
+}
+.g_left h2 {
+    font-size: 30px;
+    color: #1d1d1d;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 100px 0 24px 0; 
+}
+.g_right {
+    text-align: right;
+}
+.g_right h2 {
+    font-size: 30px;
+    color: #0f4cd3;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 100px 0 24px 0; 
+}
+.g_right p {
+    color: #666;
+    /* 색상코드가 6자리가 다 똑같으면 3개만 써도됨 */
+}

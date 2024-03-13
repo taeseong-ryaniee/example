@@ -1,0 +1,293 @@
+@font-face {font-family: 'Pretendard';	font-weight: 700;	font-display: swap; src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.subset.woff2) format('woff2'), url(../fonts/Pretendard-Bold.subset.woff) format('woff');}
+@font-face {font-family: 'Pretendard';	font-weight: 400;	font-display: swap;	src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.subset.woff2) format('woff2'), url(../fonts/Pretendard-Regular.subset.woff) format('woff');}
+@font-face {font-family: 'Pretendard';	font-weight: 300;	font-display: swap;	src: local('Pretendard Light'), url(../fonts/Pretendard-Light.subset.woff2) format('woff2'), url(../fonts/Pretendard-Light.subset.woff) format('woff');}
+body{
+    font-family: 'Pretendard', sans-serif;
+    font-size: 15px;
+    color: #1d1d1d;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.6px;
+    word-break: keep-all;}
+.wrapper{ /*홈페이지 전체 페이지 넓이 제한*/
+    width: 1280px; 
+    margin: 0 auto;}
+#wrap{
+    min-width: 1280px;}
+/* id="wrap"에 적용되는 스타일(PC형 홈페이지에서 많이 사용함_*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;}
+ul, ol, li{
+    list-style: none; /* 동그라미나 구분표 없애주는것 */}
+a{ /* a태그는 파랑색 언더라인이 기본적으로 설정됨 */
+    text-decoration: none;    /* underline 제거 */
+    color: inherit; /* 다른 스타일을 상속받음 */}
+address, em{
+        font-style: normal;}
+h1, h2, h3, h4, h5, h6, strong{
+        font-size: inherit;
+        font-weight: inherit;}
+button{
+    background-color: transparent;
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    color: inherit;}
+.header{
+    /* body기준 정렬 */
+    z-index: 100000000;
+    /* postion을 준요소가 깔려있어서 안보일때 사용*/
+    /* 가장 큰 숫자 우선순위*/
+    position: absolute;
+    /* postition 값을 주면 넓이를 잃어버림(Relative 제외) */
+    /* block으로 잡히기 때문에  */
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff;}
+.header .logo{
+    float: left;
+    margin-top: 32px;}
+.header .gnb{
+    float: right}
+.header .gnb ul{
+    display: flex;}
+.header .gnb ul li a{
+    font-weight: 700;
+    font-size: 22px;
+    padding: 34px 30px 30px 30px;
+    letter-spacing: -0.88px;
+    display: block;} 
+
+
+.visual{
+    height: 900px;
+    background: url(../images/visual_bg.png) center center no-repeat;
+    border-radius: 0 0 200px 0;
+    position: relative;}/* Absolute의 기준을 만들어줌 */
+.visual h2{
+    text-align: center;    
+    padding: 318px 0 0 0;}
+.visual .photo{
+    position: absolute;
+    bottom: -67px;
+    left: calc(50% + 538px);
+    width: 110px;
+    height: 110px;
+    background-color: #1A78DA;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1;)}
+.visual .photo i{
+    padding: 23px 0 8px 0;
+    display: block;}
+.visual .photo span{
+    display: block;
+    color: #fff;
+    line-height: 17px; }
+
+
+.culture{
+    margin-top: 148px;}
+.culture .inner{
+    position: relative;}
+.culture h2{
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -1.6px;}
+.culture .sub_tit{
+    width: 556px;
+    margin: 8px 0 26px 0;}
+.culture ul{
+    display: flex;
+    justify-content: space-between;}
+.culture ul li{
+    width: 408px;
+    letter-spacing: -0.6px;}
+.culture ul li a{
+    padding: 215px 0 6px 0;
+    width: 408px;
+    letter-spacing: -0.6px;}
+.culture ul h3{
+    font-size: 25px; 
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #3D3D3D;
+    margin: 9px 0 8px 0;}
+.culture .more{
+    position: absolute;
+    /* inner를 기준으로 정렬 */
+    right: 0;
+    top: 55px;
+    display: flex;
+    align-items: center;}
+.culture .more span{
+    margin: 0 9px 0 0;}
+
+.tour{
+    margin-top: 70px;}
+.tour .inner{
+    position: relative;}
+.tour h2{
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -1.6px;
+    margin-bottom: 26px;}
+.tour ul{
+    display: flex;
+    justify-content: space-between;}
+.tour ul li{
+    width: 190px;}
+/* A에 높이를 주면 li에 높이가 잡힌다 */
+.tour ul li.tour_01{
+    background: url(../images/tour_01.png) center center no-repeat;}
+.tour ul li.tour_02{
+    background: url(../images/tour_02.png) center center no-repeat;}
+.tour ul li.tour_03{
+    background: url(../images/tour_03.png) center center no-repeat;}
+.tour ul li.tour_04{
+    background: url(../images/tour_04.png) center center no-repeat;}
+/* Active 클래스만 별도 호출(li에 바로 붙여야 li 태그에 상속자로 인식 */
+.tour ul li a{
+    height: 290px;
+    padding: 242px 0 0 0;
+    display: block;
+    color: #FFF;}
+.tour ul li a h3{
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-align: center;}
+.tour ul li a p{
+    display: none;}
+.tour ul li.active{
+    width: 626px;}
+.tour ul li.active a{
+    padding: 215px 0 0 30px;}
+.tour ul li.active a h3{
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: -1px;}
+.tour ul li.active a p{ 
+    display: block;
+    margin: 6px 0 0 0;}
+.tour .more{
+    position: absolute;
+    right: 0;
+    top: 55px;
+    display: flex;
+    align-items: center;}
+.tour .more span{
+    margin: 0 9px 0 0;}
+.community{
+    margin-top: 146px;
+    background: url(../images/notice_bg.png) center center no-repeat;
+    height: 600px;
+    padding: 125px 0 0 0;
+    color: #FFF;}
+.community .tit{
+    width: 438px;}
+.community .inner{
+    display: flex;}
+.community .notice{
+    width: 497px;
+    height: 324px;
+    border-radius: 10px;
+    padding: 42px 40px 0 40px;
+    background-color: rgba(45, 45, 45, 0.40);}
+.community .service{
+    width: 324px;
+    margin-left: 20px;} 
+.community .tit h2{
+    font-size: 40px;
+    font-weight: 700; 
+    letter-spacing: -1.6px;
+    line-height: 37px;}
+.community p{
+    font-size: 28px;
+    font-weight: 300;
+    margin: 21px 0 0 0;}
+.community .notice h3{
+    margin-bottom: 45px;
+    font-size: 25px;
+    font-weight: 700; 
+    letter-spacing: -1.25px;}
+.community .notice ul li{
+    border-bottom: 1px solid  rgba(255, 255, 255, 0.20);}
+.community .notice ul li:last-child{
+    border-bottom: 0;}
+.community .notice ul li a{
+    line-height: 35px;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.8);}
+.community .notice ul li a span{
+    color: rgba(255, 255, 255, 0.6);}
+.community .service ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;}
+.community .service ul li{
+    width: 157px;
+    margin-bottom: 10px;}
+.community .service ul li a{
+    height: 157px;
+    background-color: rgba(45, 45, 45, 0.40);
+    border-radius: 7px;
+    display: block;
+    padding: 20px 15px 15px 20px;
+    position: relative;}
+.community .service ul li a strong{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -1px;}
+.community .service ul li a i{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;}
+
+.footer {
+    background-color: #2d2d2d;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 66px 0 66px 0;}
+.footer .footer_wrap{
+    display: flex;
+    justify-content: space-between;}
+.footer .f_nav{
+    display: flex;}
+.footer .f_nav li{
+    margin-right: 50px;
+    position: relative;}
+.footer .f_nav li::after{
+    position: absolute;
+    right: -25px;
+    top: 3px;
+    width: 1px;
+    height: 11px;
+    background-color: rgba(204, 204, 204, 0.80);
+    content: "";}
+.footer .f_nav li:last-child::after{
+    display: none;}
+.footer .f_nav li.privacy{
+    font-weight: 700;}
+.footer .f_info {
+    display: flex;
+    margin: 13px 0;}
+.footer .f_info address,
+.footer .f_info span {
+    margin-right: 50px;}
+.footer .copyright{
+    color: rgba(255, 255, 255, 0.60);}
+.footer .familysite button{
+    width: 200px;
+    line-height: 28px;
+    border: 1px solid #666;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;}

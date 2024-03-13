@@ -1,0 +1,441 @@
+.header_wrap {
+    height: 100px;
+    width: 100%;
+    background-color: #fff;
+    justify-content: space-between;
+    z-index: 100;
+    font-size: 22px;
+    position: sticky;
+    display: flex;
+}
+
+.header .logo {
+    margin: auto 0 auto 7rem;
+}
+
+.header .logo a {
+    display: block;
+    width: 10rem;
+    height: 4rem;
+    background-image: url("data:image/svg+xml,%3Csvg id='Logo' xmlns='http://www.w3.org/2000/svg' width='154.146' height='51.647' viewBox='0 0 154.146 51.647'%3E%3Cpath id='패스_3187' data-name='패스 3187' d='M155.351,12.634a3.563,3.563,0,0,0,.236,1.323,3.745,3.745,0,0,0,5.2,2.1c.589-.238,17-6.926,17-6.926s-6.461,16.569-6.707,17.186a3.857,3.857,0,0,0,2.111,5.244,3.619,3.619,0,0,0,1.307.232,3.855,3.855,0,0,0,3.635-2.815c.1-.283,8.181-22.72,8.36-23.259a6.339,6.339,0,0,0,.293-1.59A4.1,4.1,0,0,0,185.6,1.182,3.99,3.99,0,0,0,182.711,0a4.88,4.88,0,0,0-1.6.3c-.385.126-21.214,7.966-23,8.635a3.944,3.944,0,0,0-2.76,3.695' transform='translate(-32.639 0)' fill='%23e50019'/%3E%3Cpath id='패스_3188' data-name='패스 3188' d='M102.206,31.534v-.478H89.58v3.271h7.335c-1.912,6.12-8.746,9.715-8.746,9.715L90,46.623s12.21-5.1,12.21-15.089' transform='translate(-18.524 -6.245)' fill='%23353a40'/%3E%3Cpath id='패스_3189' data-name='패스 3189' d='M99.7,57.213v-6.35H95.225v7.158A3.894,3.894,0,0,0,99.4,61.875h13.88V58.614h-12.01c-1.088,0-1.551-.439-1.57-1.4' transform='translate(-20.007 -10.228)' fill='%23353a40'/%3E%3Cpath id='패스_3190' data-name='패스 3190' d='M105.3,36.988v3.269h5.329v7.875h4.479V30.616h-4.479v6.371Z' transform='translate(-22.123 -6.157)' fill='%23353a40'/%3E%3Cpath id='패스_3191' data-name='패스 3191' d='M152.919,43.716H157.4V30.453h-4.477v4.13h-4.671v3.228h4.671Z' transform='translate(-31.146 -6.124)' fill='%23353a40'/%3E%3Cpath id='패스_3192' data-name='패스 3192' d='M22.445,50.555H5.4v7.4a3.894,3.894,0,0,0,4.177,3.854H23.44V51.564a1.009,1.009,0,0,0-.994-1.009m-3.48,7.991H11.447c-1.092.006-1.552-.432-1.571-1.395V53.825h9.09Z' transform='translate(-1.134 -10.166)' fill='%23353a40'/%3E%3Cpath id='패스_3193' data-name='패스 3193' d='M22.609,31.066v-.153H4.019v3.271h13.9c0,.214,0,.487,0,.748,0,3.035-.149,5.034-.228,5.846H0v3.269H27.259V40.778H21.68a40.432,40.432,0,0,0,.929-9.712' transform='translate(0 -6.216)' fill='%23353a40'/%3E%3Cpath id='패스_3194' data-name='패스 3194' d='M59.636,48.062c3.72-.824,6.473-3.641,6.473-6.985A6.551,6.551,0,0,0,64,36.367h4.751V33.1H59.636V30.013H55.162V33.1H46.043v3.268H50.8a6.546,6.546,0,0,0-2.107,4.71c0,3.344,2.752,6.161,6.473,6.985v3.31H43.772v3.271H71.024V51.372H59.636ZM53.3,40.976a4.1,4.1,0,1,1,4.1,4.05,4.079,4.079,0,0,1-4.1-4.05' transform='translate(-9.197 -6.035)' fill='%23353a40'/%3E%3Cpath id='패스_3195' data-name='패스 3195' d='M140.555,43.526h4.335c-.182-1.063-1.766-9.644-5.9-12.613h-5l-3.845,12.721h4.492l2.562-9.159c2.16,2.553,3.207,8.214,3.352,9.052' transform='translate(-27.344 -6.216)' fill='%23353a40'/%3E%3Cpath id='패스_3196' data-name='패스 3196' d='M142.92,58.286c-1.141,0-1.346-.293-1.346-1.272V56.6h13.5v-6.87a1.012,1.012,0,0,0-1.032-1.051H137.18v3.15h13.608v1.682h-13.5v4.066c0,2.354,1.675,3.854,4.181,3.854h13.894v-3.15Z' transform='translate(-28.821 -9.79)' fill='%23353a40'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+}
+
+.header .gnb_close,
+.header .gnb_open {
+    display: none;
+}
+
+.header .gnb {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .gnb ul.depth1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .gnb ul.depth1>li>a {
+    line-height: 100px;
+    padding: 0 40px;
+}
+
+.header .gnb ul.depth1>li>ul.depth2>a {
+    display: block;
+}
+
+.header .tnb {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 5rem;
+}
+
+.header .tnb a {
+    margin: auto 20px auto 0;
+    align-items: center;
+}
+
+.header .tnb .oullim {
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    width: 120px;
+    height: 60px;
+}
+
+.header .tnb .oullim::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg id='어울림_로고' data-name='어울림 로고' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='116.635' height='19.462' viewBox='0 0 116.635 19.462'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_68' data-name='사각형 68' width='116.635' height='19.462' fill='none'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_91' data-name='그룹 91' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_3199' data-name='패스 3199' d='M117.115,8.272H114.1a4.931,4.931,0,0,0-4.793-4.6,5.022,5.022,0,0,0-4.841,5.314A5.021,5.021,0,0,0,109.31,14.3,4.929,4.929,0,0,0,114.1,9.706h3.011v9.787h1.768V2.89h-1.768Zm-7.8,4.608c-1.817,0-3.157-1.745-3.157-3.9s1.34-3.9,3.157-3.9,3.155,1.744,3.155,3.9-1.342,3.9-3.155,3.9' transform='translate(-38.475 -1.102)' fill='%23b40030'/%3E%3Crect id='사각형_67' data-name='사각형 67' width='1.771' height='9.118' transform='translate(114.864 1.788)' fill='%23b40030'/%3E%3Cpath id='패스_3200' data-name='패스 3200' d='M133.764,15.91h7.015v1.6h-4.7v1.407H145.4v1.014h-9.227V23.32a.561.561,0,0,0,.63.6h10.545V22.514h-9.405v-1.18h9.227V18.1a.559.559,0,0,0-.63-.6h-3.987v-1.6h7.019V14.5H133.764Z' transform='translate(-49.265 -5.532)' fill='%23b40030'/%3E%3Cpath id='패스_3201' data-name='패스 3201' d='M143.48,8.713c2.835,0,4.792-1.59,4.792-3.551s-1.957-3.554-4.792-3.554-4.791,1.592-4.791,3.554,1.956,3.551,4.791,3.551m0-5.715c1.8,0,3.049.968,3.049,2.164s-1.244,2.163-3.049,2.163-3.05-.969-3.05-2.163S141.677,3,143.48,3' transform='translate(-51.078 -0.614)' fill='%23b40030'/%3E%3Cpath id='패스_3202' data-name='패스 3202' d='M168.293,25.317a.475.475,0,0,0,.533.51h9.786V19.5h-10.32Zm1.767-4.409h6.781V24.42H170.06Z' transform='translate(-61.981 -7.438)' fill='%23b40030'/%3E%3Cpath id='패스_3203' data-name='패스 3203' d='M173.411,11.441V10.052a16.931,16.931,0,0,1-4.231.358h-3.451V8.466h5.9V4.384a.562.562,0,0,0-.633-.6h-7.167V5.19h6.03V7.062h-5.893v4.247a.475.475,0,0,0,.534.508h4.685a14.36,14.36,0,0,0,4.231-.375' transform='translate(-60.335 -1.444)' fill='%23b40030'/%3E%3Cpath id='패스_3204' data-name='패스 3204' d='M48.544,11.558c0,3.739-4.227,6.77-9.438,6.77s-9.441-3.03-9.441-6.77,4.226-6.771,9.441-6.771,9.438,3.03,9.438,6.771' transform='translate(-10.925 -1.826)' fill='%23b40030'/%3E%3Cpath id='패스_3205' data-name='패스 3205' d='M7.28,0c4.018,0,7.277,4.357,7.277,9.731S11.3,19.462,7.28,19.462,0,15.105,0,9.731,3.26,0,7.28,0' transform='translate(0 0)' fill='%23b40030'/%3E%3Cpath id='패스_3206' data-name='패스 3206' d='M84.308,10.352a8.908,8.908,0,0,1-17.812,0,8.908,8.908,0,0,1,17.812,0' transform='translate(-24.49 -0.621)' fill='%23b40030'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-size: 120px auto;
+    content: "";
+}
+
+.header .gnb ul.depth2 {
+    display: none;
+}
+
+.header.menu_over .header_wrap::before {
+    content: "";
+    position: absolute;
+    top: 140px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    z-index: -1;
+
+}
+
+.header.menu_over .gnb ul.depth2 {
+    font-size: 20px;
+    display: block;
+    line-height: 50px;
+    text-align: center;
+    align-items: center;
+    height: 17rem;
+}
+
+.header .gnb ul.depth1>li.on>a {
+    color: #e50019;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 15px;
+    text-decoration-thickness: 1px;
+}
+
+.header.menu_over .gnb ul.depth1>ul.depth2>li.on>a {
+    font-weight: 700;
+    color: #e50019;
+    text-decoration: underline;
+    text-underline-offset: 15px;
+    text-decoration-thickness: 1px;
+}
+
+@media screen and (max-width : 1280px) {
+    .header_wrap {
+        font-size: 20px;
+        position: sticky;
+    }
+
+    .header .logo {
+        margin: auto 0 auto 3rem;
+    }
+
+    .header .gnb {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .header .gnb ul.depth1>li>a {
+        padding: 0 20px;
+    }
+
+    .header .gnb ul.depth2 {
+        display: none;
+    }
+
+    .header.menu_over .header_wrap::before {
+        height: 300px;
+    }
+
+    .header.menu_over .gnb ul.depth2 {
+        height: 13rem;
+        font-size: 18px;
+    }
+
+    .header .tnb {
+        display: none;
+    }
+}
+
+@media screen and (max-width : 740px) {
+    .header_wrap {
+        font-size: 16px;
+        height: 80px;
+        background-color: #f3f3f3;
+    }
+
+    .header .logo {
+        margin: auto 0 auto 20px;
+    }
+
+    .header .logo a {
+        background-size: 7rem auto;
+    }
+
+    .header .gnb,
+    .header .tnb {
+        display: none;
+    }
+
+    .header .gnb_close,
+    .header .gnb_open {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        background-size: 30px auto;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        line-height: 0;
+        font-size: 0;
+    }
+
+    .header .gnb_open {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20.43' height='19.28' viewBox='0 0 20.43 19.28'%3E%3Cg id='Menu_open' transform='translate(0.5 0.5)'%3E%3Cpath id='패스_3211' data-name='패스 3211' d='M10.29,14.86H29.71' transform='translate(-10.28 -14.86)' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3Cpath id='패스_3212' data-name='패스 3212' d='M10.28,24H29.7' transform='translate(-10.28 -14.86)' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3Cpath id='패스_3213' data-name='패스 3213' d='M10.29,33.14H29.7' transform='translate(-10.28 -14.86)' fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+    }
+
+    .header.menu_open .gnb {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #fff;
+        display: block;
+        height: 100vh;
+    }
+
+    .header.menu_open .gnb ul.depth1 {
+        padding-top: 20px;
+        padding-left: 20px;
+        flex-direction: column;
+        font-size: 22px;
+        width: 150px;
+    }
+
+    .header.menu_open .gnb ul.depth1>li>a {
+        line-height: 60px;
+        padding: 15px;
+    }
+
+    .header.menu_open .gnb ul.depth1>li.on>ul.depth2 {
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .header.menu_open .gnb ul.depth2>li.on>a ::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 10px;
+        height: auto;
+        width: auto;
+        background-color: #2d2d2d;
+        content: "";
+    }
+
+    .header.menu_open .gnb ul.depth2>li.on>a {
+        font-weight: 700;
+    }
+}
+
+footer {
+    padding: 3rem 0;
+    background-color: #595959;
+    color: #fff;
+    display: flex;
+}
+
+footer .footer_wrap {
+    font-size: 1rem;
+    position: relative;
+}
+
+footer .family_site {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+footer .family_site ul {
+    display: none;
+}
+
+footer .family_site .close,
+footer .family_site .open {
+    width: 20rem;
+    height: 3rem;
+    border: solid 1px #95989a;
+    position: relative;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+footer .family_site .close::after,
+footer .family_site .open::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+}
+
+footer .family_site .close {
+    display: none;
+}
+
+footer .family_site ul li a {
+    color: #2d2d2d;
+    display: block;
+    line-height: 2rem;
+}
+
+footer .family_site.on ul li a {
+    display: block;
+    position: absolute;
+    width: 20rem;
+    height: 700rem;
+    bottom: 3rem;
+    right: 0;
+    background-color: #fff;
+}
+
+footer .footer_nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+footer .footer_nav li a {
+    margin-right: 1rem;
+}
+
+footer .privacy {
+    font-weight: 700;
+    margin: 1rem 0 3rem;
+}
+
+@media screen and (max-width : 1280px) {
+    footer .footer_nav {
+        padding: 0 5rem;
+    }
+
+}
+
+.sub_visual h2 {
+    display: none;
+}
+
+.sub_visual .visual_wrap{
+    color: #fff;
+    left: 0;
+    height: 400px;
+    width: 100vw;
+    background-image: url(../images/contents/intro/Visual_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.sub_visual .visual_wrap ul {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 145px 0 145px 0;
+}
+
+.sub_visual .visual_wrap ul .tit {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.sub_visual ul .sub_tit {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.sub_visual .lnb {
+    margin-top: 100px;
+}
+
+.sub_visual .lnb ul{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.sub_visual .lnb ul::before{
+    position: absolute;
+    top: 70px;
+    left: calc(50% - 500px);
+    width: 1000px;
+    height: 1px;
+    background-color: #2d2d2d;
+    content: "";
+}
+
+.sub_visual .lnb ul li {
+    width: 200px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.sub_visual .lnb ul li a {
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+.sub_visual .lnb ul li:hover {
+    font-weight: 800;
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+@media screen and (max-width : 740px) {
+    .sub.visual {
+        color: #fff;    
+        top:0;
+        left: 0;
+        height: 400px; 
+    }
+    .sub.visual ul {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 0;
+    }
+
+    .sub_visual ul .tit {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .sub_visual ul .sub_tit {
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .sub_visual .lnb ul::before {
+        top: 50px;
+        left: -20%;
+        width: 600px;
+    }
+
+    .sub_visual .lnb ul li {
+        width: 120px;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    .sub_visual .lnb ul li a {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .sub_visual .lnb ul li:hover {
+        font-weight: 800;
+        background-color: #1d1d1d;
+        color: #fff;
+    }
+}

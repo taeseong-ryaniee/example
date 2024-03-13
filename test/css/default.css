@@ -1,0 +1,18 @@
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;}
+ul, ol, li { 
+    list-style: none;}
+a { text-decoration: none; 
+    color: inherit;}
+address, em {
+    font-style: normal;}
+h1, h2, h3, h4, h5, h6, strong {
+    font-size: inherit;
+    font-weight: inherit;}
+button {
+    background-color: transparent; 
+    border: 0;
+    color: inherit;
+    font-family: inherit;}

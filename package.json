@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "@types/jquery": "^3.5.29"
+  },
+  "dependencies": {
+    "@studio-freight/lenis": "^1.0.39",
+    "gsap": "^3.12.5",
+    "jquery": "^4.0.0-beta",
+    "lenis": "^0.0.2",
+    "swiper": "^11.0.7"
+  }
+}

@@ -1,0 +1,49 @@
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff'); font-weight:400; font-style:normal; }
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff'); font-weight:700; font-style:normal; }
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff'); font-weight:800; font-style:normal; }
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff'); font-weight:900; font-style:normal; }
+/*
+  웹폰트 정의된 것을 불러오는 방식
+  돋움, 굴림, 맑은고딕, 궁서는 한글 윈도우와 ISO(맥)에 기본 포함되는 서체 
+  그외의 모든 서체는 웹폰트를 사용해야함.
+*/
+h1 {
+  font-family: 'Pretendard', serif;
+  /* 웹폰트를 적용하는 방식 */
+  font-size: 30px; 
+  /* 포토샵의 글자크기를 그대로 입력하고 단위만 px로 사용함(단위 PT 아님 주의) */
+  color: #1d1d1d;
+  /* 글자의 색상 */
+  font-weight: 900;
+  /* 글자의 두께 400 - regular, 700 - bold, 900 - black 서체의 종류마다 다름  */
+  text-align: center;
+}
+/* 모든 P태그에 스타일을 줌 */
+p {
+  font-family: 'Pretendard', serif;
+  font-size: 15px;
+  color: #3d3d3d;
+}
+/* html에서 class명이 sub_tit로 정의된 태그를 찾아라 
+  css에서는 class명 앞에 점(.)을 붙임 */
+.sub_tit {
+  text-align: center;
+}
+h2 {
+  font-family: 'Pretendard', serif;
+  font-size: 25px;
+  color: #1d1d1d;
+}
+h3 {
+  font-family: 'Pretendard', serif;
+  font-size: 20px;
+  color: #3d3d3d;
+}
+div {
+  width: 1280px;
+  /* 포토샵 레이아웃 가이드 왼쪽에서 오른쪽 끝 넓이 */
+  margin: 0 auto;
+  /* 레이아웃을 브라우저 가운데 배치하는 명령 */
+  /* 홈페이지 넓이를 1280px제한하고 홈페이지를 브라우저 가운데 정렬
+     글자가운데 정렬과 다름... */
+} 

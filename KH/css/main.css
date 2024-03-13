@@ -1,0 +1,284 @@
+@import url(default.css);
+@import url(layout.css);
+@import url(common.css);
+.visual .visual_swiper {
+    position: relative;
+	height: 900px;
+}
+.visual .visual_swiper .swiper-slide img {
+    height: 100%;
+    width: 100vw;
+    object-fit: cover;
+}
+.visual .visual_swiper .visual_txt {
+	position: absolute;
+	top: 20%;
+	left: 5%;
+	color: #fff;
+	z-index: 10;
+}
+.visual .visual_swiper .visual_txt h2 {
+	font-size: 6rem;
+	font-weight: 900;
+}
+.visual .visual_swiper .visual_txt h2 strong {
+	font-size: 4rem;
+}
+.visual .visual_swiper .visual_txt p {
+	font-size: 1.6rem;
+	margin: 2rem 0 0 1.5rem;
+	position: relative;
+}
+.visual .visual_swiper .visual_txt p::before {
+	position: absolute;
+	top: -15px;
+	left: -18px;
+	content: "";
+	display: block;
+	width: 1px;
+	height: 80px;
+	background-color: #fff;
+	margin: 1.5rem 0;
+}
+
+.visual .visual_swiper .btn_ctrl {
+	position: absolute;
+	right: 5%;
+	bottom: 5%;
+	z-index: 20;
+}
+.visual .visual_swiper .btn_ctrl button {
+	line-height: 0;
+	font-size: 0;
+	width: 50px;
+	height: 50px;
+	color: #fff;
+}
+.visual .visual_swiper .btn_ctrl button.visual_prev,
+.visual .visual_swiper .btn_ctrl button.visual_next {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16' height='16' viewBox='0 0 16 16'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect width='16' height='16' fill='none'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Skip_previous' data-name='Skip previous' clip-path='url(%23clip-path)'%3E%3Crect id='사각형_1455' data-name='사각형 1455' width='16' height='16' transform='translate(0)' fill='none'/%3E%3Cpath id='합치기_45' data-name='합치기 45' d='M-949-17060.92a1,1,0,0,1-1-1V-17071a1,1,0,0,1,1-1h1.692a1,1,0,0,1,1,1v9.078a1,1,0,0,1-1,1Zm13.162-.232-7.361-4.293a1.165,1.165,0,0,1,0-2.086l7.361-4.293a1.216,1.216,0,0,1,1.838,1.1v8.467a1.279,1.279,0,0,1-1.31,1.215A1.345,1.345,0,0,1-935.839-17061.152Z' transform='translate(950 17073.998)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+	background-repeat: no-repeat no-repeat;
+	background-position: center center;
+	background-size: 30px auto;
+}
+.visual .visual_swiper .btn_ctrl button.visual_next {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16.003' height='16' viewBox='0 0 16.003 16'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect width='16.003' height='16' fill='none'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Skip_next' data-name='Skip next' clip-path='url(%23clip-path)'%3E%3Crect id='사각형_1456' data-name='사각형 1456' width='16' height='16' fill='none'/%3E%3Cpath id='합치기_47' data-name='합치기 47' d='M-936.693-17060.924a1,1,0,0,1-1-1v-9.08a1,1,0,0,1,1-1H-935a1,1,0,0,1,1,1v9.08a1,1,0,0,1-1,1Zm-13.308-1.4v-8.467a1.307,1.307,0,0,1,1.842-1.105l7.361,4.293a1.169,1.169,0,0,1,0,2.088l-7.361,4.293a1.261,1.261,0,0,1-.63.172A1.234,1.234,0,0,1-950-17062.32Z' transform='translate(950.001 17074.002)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.visual .btn_ctrl button:last-child {
+	margin-right: 10px;
+}
+.visual .btn_ctrl .visual_stop {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16' height='16.002' viewBox='0 0 16 16.002'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect width='16' height='16.002' fill='none'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Pause' clip-path='url(%23clip-path)'%3E%3Crect id='사각형_1448' data-name='사각형 1448' width='16' height='16' fill='none'/%3E%3Cpath id='합치기_46' data-name='합치기 46' d='M-939.4-17056a1,1,0,0,1-1-1v-14a1,1,0,0,1,1-1h2.8a1,1,0,0,1,1,1v14a1,1,0,0,1-1,1Zm-9.6,0a1,1,0,0,1-1-1v-14a1,1,0,0,1,1-1h2.8a1,1,0,0,1,1,1v14a1,1,0,0,1-1,1Z' transform='translate(951 17072)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+	background-repeat: no-repeat no-repeat;
+	background-position: center center;
+	background-size: 30px auto;
+}
+.visual .btn_ctrl .visual_play {
+	display: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='16' height='16.002' viewBox='0 0 16 16.002'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect width='16' height='16.002' fill='none'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Pause' clip-path='url(%23clip-path)'%3E%3Crect id='사각형_1448' data-name='사각형 1448' width='16' height='16' fill='none'/%3E%3Cpath id='합치기_46' data-name='합치기 46' d='M-939.4-17056a1,1,0,0,1-1-1v-14a1,1,0,0,1,1-1h2.8a1,1,0,0,1,1,1v14a1,1,0,0,1-1,1Zm-9.6,0a1,1,0,0,1-1-1v-14a1,1,0,0,1,1-1h2.8a1,1,0,0,1,1,1v14a1,1,0,0,1-1,1Z' transform='translate(951 17072)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+	background-repeat: no-repeat no-repeat;
+	background-position: center center;
+	background-size: 30px auto;
+}
+
+@media screen and (max-width: 740px) {
+.visual .visual_swiper {
+    height: 500px;
+    }
+	.visual .visual_swiper .visual_txt {
+		top: 10%;
+		left: 5%;
+	}
+	.visual .visual_swiper .visual_txt h2 {
+		font-size: 3.5rem;
+	}
+	.visual .visual_swiper .visual_txt h2 strong {
+		font-size: 2rem;
+		font-weight: 400;
+	}
+	.visual .visual_swiper .visual_txt p {
+		font-size: 1.1rem;
+		margin: 1rem 0 0 1rem;
+		font-weight: 300;
+	}
+	.visual .visual_swiper .visual_txt p::before {
+		top: -30%;
+		left: -4%;
+		height: 50px;
+	}
+	.visual .visual .btn_ctrl button {
+		width: 30px;
+		height: 30px;
+	}
+	.visual .visual_swiper .btn_ctrl button.visual_prev,
+	.visual .visual_swiper .btn_ctrl button.visual_next {
+		background-size: 15px auto;
+	}
+}
+
+.biz {
+	color: #fff;
+	background-color: #0d0d0d;
+}
+.biz .tit h2 {
+	font-size: 4rem;
+	padding: 6.5rem 0;
+}
+.biz .tit h2 strong {
+	font-size: 3rem;
+	font-weight: 800;
+}
+.biz .tit h2 br {
+	display: none;
+}
+.biz .list em {
+	display: none;
+}
+.biz .list ul {
+	display: flex;
+    padding-bottom: 100px;
+}
+.biz .list ul li {
+	width: 25%;
+	justify-content: flex-start;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	transition: 0.5s;
+}
+
+.biz .list ul li a {
+	display: block;
+	height: 600px;
+	justify-content: flex-start;
+	text-align: right;
+	font-size: 3.5rem;
+	padding: 3rem 3rem 0 0;
+    cursor: pointer; /* 마우스를 오버하면 손바닥 모양 */
+}
+
+.biz .list ul li span {
+	display: none;
+}
+
+.biz .list ul .biz01 {
+	background-image: url(../images/main/biz01.png);
+}
+.biz .list ul .biz02 {
+	background-image: url(../images/main/biz02.png);
+}
+.biz .list ul .biz03 {
+	background-image: url(../images/main/biz03.png);
+}
+.biz .list ul .biz04 {
+	background-image: url(../images/main/biz04.png);
+}
+
+.biz .list ul li.on {
+	width: 40%;
+}
+.biz .list ul li.off {
+	width: 20%;
+}
+.biz .list ul li.on span {
+	display: block;
+}
+@media screen and (max-width: 1024px) {
+    .biz .tit h2 span{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 740px) {
+	.biz .tit h2,
+	.biz .tit h2 strong {
+		font-size: 30px;
+	}
+	.biz .tit h2 {
+		padding: 40px 0 4rem 0;
+		position: relative;
+	}
+	.biz .tit h2::after {
+		position: absolute;
+		top: 55%;
+		left: 55%;
+		height: 70px;
+		border: 1px solid #fff;
+		transform: rotate(35deg);
+		content: "";
+	}
+	.biz .tit h2 br {
+		display: inline;
+	}
+	.biz .tit h2 strong {
+		font-weight: 600;
+	}
+	.biz .list ul {
+        flex-direction: column;
+        color: #fff;
+        margin: 0 20px 40px 0;
+        align-items: flex-end;
+        justify-content: space-between;
+	}
+	.biz .list ul .biz01,
+	.biz .list ul .biz02,
+	.biz .list ul .biz03,
+	.biz .list ul .biz04 {
+        all: unset;
+	}
+    .biz .tit h2 span br{
+        display: none;
+    }
+	.biz .list ul li a {
+        all: unset;      
+	}
+	.biz .list em {
+		display: inline;
+		font-size: 1.75rem;
+        line-height:200%;
+	}
+}
+.esg{
+    background-color: #0d0d0d;}
+.esg .esg_tit {
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 6.3rem
+}
+.esg .esg_tit h2{
+    font-size: 5rem;
+    font-weight: 800;}
+.esg .esg_tit span{
+    text-align: right;
+    font-size: 3rem;}
+.esg .esg_tit span br{
+    display: none}
+.esg .esg_list{
+    display: flex;
+    justify-content: space-between;
+    padding: 12rem 0 6.5rem 0;}
+.esg .esg_list li{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: #fff;}
+@media screen and (max-width: 1024px) {
+    .esg .esg_tit h2{
+        font-size: 4rem;
+    }
+    .esg .esg_tit span{
+        font-size: 2.5rem;
+    }
+    .esg .esg_tit span br{
+        display: inline;
+    }
+}
+@media screen and (max-width: 740px) {
+
+}

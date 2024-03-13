@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-display: swap;
+    src: local('Pretendard Light'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');}
+body{
+    font-family: 'Pretendard', sans-serif;
+    font-size: 15px; 
+    color: #1d1d1d;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.04em;
+    word-break: keep-all;}
+.wrapper{ /*홈페이지 전체 페이지 넓이 제한*/
+    width: 1280px; 
+    margin: 0 auto;}
+#wrap {min-width: 1280px;}
+* { padding: 0;
+    margin: 0;
+    box-sizing: border-box;}
+ul, ol, li{
+    list-style: none;}
+a{
+    text-decoration: none;
+    color: inherit;}
+address, em{
+        font-style: normal;}
+h1, h2, h3, h4, h5, h6, strong{
+        font-size: inherit;
+        font-weight: inherit;}
+.intro h1{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 60px 0 0 0;}
+.intro h2{
+    font-size: 20px;
+    font-weight: 700;
+    color: #07B53B;
+    margin: 20px 0 20px 0;}
+.intro ul{
+    display: flex;}
+.intro ul li{
+    text-align: center;
+    border: 1px solid #1d1d1d;
+    padding: 9px 44px 9px 44px;
+    margin: 26px 5px 40px 0;
+    display: inline-block;}
+.intro .download{
+    color: #07B53B;
+    border: 1px solid #07B53B;}
+.intro img{
+    margin: 0 0 67px 0;}
+.store_info{
+    background-image: url(../images/Rectangle\ 2.png);
+    height: 598px center center no-repeat;
+    color: #fff;
+    text-align: center;}
+.store_info h1{
+    font-size: 30px;
+    font-weight: 700;
+    padding: 63px 0 30px 0;}
+.store_info a{
+    border: 1px solid #fff;
+    padding: 9px 44px 9px 44px;
+    margin: 30px 0 0 0;
+    display: inline-block;}
+.store_info img{
+    margin: 30px 0 30px 0;}

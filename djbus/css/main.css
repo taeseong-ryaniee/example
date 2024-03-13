@@ -1,0 +1,183 @@
+@font-face {font-family: 'Pretendard';	font-weight: 700;	font-display: swap; src: local('Pretendard Bold'), url(./woff2-subset/Pretendard-Bold.subset.woff2) format('woff2'), url(./woff-subset/Pretendard-Bold.subset.woff) format('woff');}
+@font-face {font-family: 'Pretendard';	font-weight: 400;	font-display: swap;	src: local('Pretendard Regular'), url(./woff2-subset/Pretendard-Regular.subset.woff2) format('woff2'), url(./woff-subset/Pretendard-Regular.subset.woff) format('woff');}
+@font-face {font-family: 'Pretendard';	font-weight: 300;	font-display: swap;	src: local('Pretendard Light'), url(./woff2-subset/Pretendard-Light.subset.woff2) format('woff2'), url(./woff-subset/Pretendard-Light.subset.woff) format('woff');}
+body{
+    font-family: 'Pretendard', sans-serif;
+    font-size: 15px;
+    color: #1d1d1d;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.06em;
+    word-break: keep-all;}
+.wrapper{ /*홈페이지 전체 페이지 넓이 제한*/
+    width: 1303px; 
+    margin: 0 auto;}
+#wrap {
+    min-width: 1303px;}
+/* id="wrap"에 적용되는 스타일(PC형 홈페이지에서 많이 사용함_*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;}
+ul, ol, li{
+    list-style: none; /* 동그라미나 구분표 없애주는것 */}
+a{ /* a태그는 파랑색 언더라인이 기본적으로 설정됨 */
+    text-decoration: none;    /* underline 제거 */
+    color: inherit; /* 다른 스타일을 상속받음 */}
+address, em{
+        font-style: normal;}
+h1, h2, h3, h4, h5, h6, strong{
+        font-size: inherit;
+        font-weight: inherit;}
+.header {
+    height: 100px;}
+.header .logo{
+    float: left;
+    margin: 20px 0 20px 0;}
+.header .gnb{
+    float: right;}
+.header .gnb ul{
+    display:flex;}
+.header .gnb ul li a{
+    font-weight: 700;
+    font-size: 15px;
+    padding: 40px 12px 40px 10px; 
+    display: block;}
+.visual {
+    height: 700px;
+    background: url(../images/content_bussuffix.jpg) center center no-repeat;
+    color: #fff}
+.visual strong {
+    font-weight: 400;
+    font-size: 36px;
+    display: block;
+    padding: 130px 0 15px 0;}
+.visual h2{
+    color:#fff;
+    font-size: 52px;}
+.biz .art,
+.biz .edu{
+    display: flex}
+.biz .art{
+    margin: 65px 0 0 0}
+.biz .edu{
+    justify-content: flex-end;
+    margin: 50px 0 75px 0}
+.biz .art .inner{
+    margin: 200px 0 20px 50px;
+    width: 350px}
+.biz .edu .inner{
+    margin: 200px 50px 20px 0;
+    width: 350px;
+    text-align: right;}
+.biz .art h2,
+.biz .edu h2{
+    color: #1d1d1d;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0px 0px 20px 0;}
+.biz .art .sub_tit,
+.biz .edu .sub_tit{
+    color: #1d1d1d;
+    font-size: 15px;
+    font-weight: 300;}
+.biz .art .btn_wrap,
+.biz .edu .btn_wrap{
+    display: flex;
+    margin: 10px 0 0 0;}
+.biz .edu .btn_wrap{
+    justify-content: flex-end;}
+.biz .art .btn_wrap a,
+.biz .edu .btn_wrap a{
+    border: 1px solid rgba(0,0,0,0.4);
+    padding: 7px 15px 7px 15px;
+    display: block;}
+.biz .art .btn_wrap a{
+    margin: 15px 7px 0 0;}
+.biz .edu .btn_wrap a{
+    margin: 15px 0 0 7px;}
+.bbs{
+    background: url(../images/bbs_bg.png) center top no-repeat;
+    color: #fff;}
+.bbs .notice{
+    display: flex;
+    justify-content: space-between;}
+.bbs .notice .title{
+    margin: 97px 0 0 0;}
+.bbs .notice .title h2{
+    font-size: 40px;
+    font-weight: 700;}
+.bbs .notice .title p{
+    font-size: 18px;
+    font-weight: 300;
+    margin: 10px 0 12px 0;}
+.bbs .notice .title a{
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 9px 20px 9px 20px;
+    display: inline-block;}
+.bbs .notice ul {
+    margin: 111px 0 0 0;
+    width: 600px;}
+.bbs .notice ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);}
+.bbs .notice ul li:last-child {
+    border-bottom: 1;}
+    /* border를 빼기 = 두께를 0을 준다. */
+.bbs .notice ul li a{
+    display: flex;
+    justify-content: space-between;
+    line-height: 43px;
+    color: rgba(255,255,255,0.6)}
+.bbs .notice ul li a span {
+    color: rgba(255, 255, 255, 0.8);}
+.bbs .video {
+    margin: 95px 0 0 0 ;}    
+.bbs .video h2 {
+    font-size: 40px;
+    font-weight: 700;}
+.bbs .video ul{
+    margin: 247px 0 0 0;
+    display: flex;
+    justify-content: space-between;}
+.bbs .video ul li{
+    width: 305px;
+    color: #1d1d1d;};
+.bbs .video ul li strong{
+    font-size: inherit;
+    padding: 15px 0 15px 0;
+    font-weight: 400;
+    display: block;}
+.bbs .video ul li a img{
+    border: 6px solid #015FDB;
+    box-shadow: -3px -3px 5px rgba(0,0,0,0.1);}
+.footer{
+    background-color: #2d2d2d;
+    color:rgba(255, 255, 255, 0.8);
+    margin: 126px 0 0 0;
+    padding: 62px 0 65px 0}
+.footer .f_nav{
+    display: flex;}
+.footer .f_nav li{
+    margin: 0 15px 0 0;
+    position: relative;}
+.footer .f_nav li ::after{
+    position: absolute;
+    right: -9px;
+    top: 2px;
+    width: 1px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+    content:"";}
+.footer .f_nav li:last-child ::after{
+    display: none;}
+.footer .f_nav .privacy{
+    font-weight: 700;}
+.footer .f_info{
+    display: flex;
+    margin: 23px 0 23px 0;}
+.footer .f_info span,
+.footer .f_info address{
+    margin: 0 26px 0 0}
+.footer .copyright{
+    color: rgba(255, 255, 255, 0.6);}

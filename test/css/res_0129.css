@@ -1,0 +1,218 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css');
+html, body{
+    font-family: 'Pretendard', sans-serif;
+    font-size: 15px;
+    color: #1c1c1c;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.6px;
+    word-break: keep-all;}
+.wrapper{ /*홈페이지 전체 페이지 넓이 제한*/
+        width: 1280px; 
+        margin: 0 auto;}
+#wrap{min-width: 1280px;}/*모바일 최소사이즈*/
+/* id="wrap"에 적용되는 스타일(PC형 홈페이지에서 많이 사용함_*/
+
+@media screen and (max-width:640px) {
+    html, body{
+        font-size: 13px;}
+        /*바뀌는것만 변동해야되고 선택자는 동일해야한다*/
+        /*PC가 위 모바일이 아래 CSS는 위에서 아래로 순차적으로 적용됨*/
+    .wrapper{ /*홈페이지 전체 페이지 넓이 제한*/
+        width: auto;
+        margin: 0 20px}/*모바일에서 여백을 대략 20준다*/
+
+    #wrap{
+        min-width: 320px;}}/*모바일 최소사이즈*/
+/* id="wrap"에 적용되는 스타일(PC형 홈페이지에서 많이 사용함_*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;}
+ul, ol, li{
+    list-style: none; /* 동그라미나 구분표 없애주는것 */}
+a{ /* a태그는 파랑색 언더라인이 기본적으로 설정됨 */
+    text-decoration: none;    /* underline 제거 */
+    color: inherit; /* 다른 스타일을 상속받음 */}
+address, em{
+    font-style: normal;}
+h1, h2, h3, h4, h5, h6, strong{
+    font-size: inherit;
+    font-weight: inherit;}
+button{
+    background-color: transparent;
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    color: inherit;}
+
+
+.notice{
+    margin-top: 110px;} 
+.notice_wrap{
+    position: relative;}
+.notice h2{
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 800;
+    margin-bottom: 72px;
+    color: #AAA;}
+.notice h2 strong{
+    color:#1c1c1c;}
+.notice ul{
+    display: flex;
+    justify-content: space-between;}
+.notice ul li{
+    width: 299px;}
+.notice ul li a{
+    display: block;}
+.notice ul li a strong{
+    margin: 18px 0 14px 0;
+    display: block;
+    font-size: 18px;}
+.notice ul li a span{
+    display: block;
+    font-size: 18px;
+    color: #AAA;}
+/* display block을 주면 자동으로 줄바꿈이 된다 */
+.notice .notice_wrap{
+    position: relative;}
+.notice .more a{
+    position: absolute;
+    top: -56px;
+    right: 0;
+    padding: 0 30px;
+    display: block;
+    border-radius: 100px;
+    line-height: 30px;
+    border: 1px solid #1c1c1c;}
+.notice .more a:hover{
+    background-color: #1d1d1d;
+    color: #fff}
+@media screen and (max-width:640px){
+    .notice{
+        margin: 49px 0 0 0;} 
+    .notice h2{
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 33px;} 
+    .notice ul{
+        display: block;} 
+    .notice ul li{
+        width: auto;
+        margin-bottom: 23px;}    
+    .notice ul li a{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;}
+    .notice ul li a img{
+        width: 96px;}
+    .notice ul li a .inner{
+        width: calc(100% - 110px);}   
+    .notice ul li a strong{
+        font-size: 13px;
+        line-height: 22px;
+        margin: 0 0 3px 0;
+        overflow: hidden;}
+    .notice ul li a span{
+        font-size: 13px;
+        line-height: 11px;}
+    .notice .more{
+        position: relative;
+        right: auto;
+        top: auto;
+        margin: 33px 0 0 0;
+        text-align: center;}
+    .notice .more a{
+        display: inline-block;
+        border-radius: 100px;   
+        line-height: 30px;
+        padding: 0 25px;}}
+
+.news{
+    margin-top: 110px;} 
+.news_wrap{
+    position: relative;}
+.news h2{
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 800;
+    margin-bottom: 72px;
+    color: #AAA;}
+.news h2 strong{
+    color:#1c1c1c;}
+.news ul{
+    display: flex;
+    justify-content: space-between;}
+.news ul li{
+    width: 299px;}
+.news ul li a{
+    display: block;}
+.news ul li a strong{
+    margin: 18px 0 14px 0;
+    display: block;
+    font-size: 15px;
+    line-height: 16px;
+    overflow: hidden;}
+.news ul li a span{
+    display: block;
+    font-size: 18px;
+    color: #AAA;}
+.news .news_wrap{
+    position: relative;}
+.news .more a{
+    position: absolute;
+    top: -56px;
+    right: 0;
+    padding: 0 30px;
+    display: block;
+    border-radius: 100px;
+    line-height: 30px;
+    border: 1px solid #1c1c1c;}
+.news .more a:hover{
+    background-color: #1d1d1d;
+    color: #fff}
+    
+@media screen and (max-width:640px){
+    .news {
+        margin: 49px 0 0 0;}
+    .news h2 {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 35px;}
+    .news h2 br {
+        display: none;}
+        /* br태그를 숨김처리하기때문에 줄바꿈이 사라짐  
+        br태그는 여는 태그 닫는 태그가 없는 단독태그라 가능 */
+    .news ul{
+        flex-wrap: wrap;}
+    .news ul li {
+        width: calc(50% - 8px);
+        margin-bottom: 20px;}
+        /* 한줄에 2개씩 사이에 여백 16px을 고정으로 배치 */
+    .news ul li a img {
+        width: 100%;}
+            /* 감싸는 요소의 넓이에 꽉차게 들어감
+    높이는 비율에 맞게 조정 */
+    .news ul li a strong {
+        font-size: 13px;
+        margin: 5px 0;
+        word-break: break-all;}
+    .news ul li a span{
+        font-size: 13px;
+        margin-bottom: 30px;}
+    .news .more {
+        position: relative;
+        margin: 29px 0 30px 0;
+        display: flex;
+        justify-content: space-between;}
+    .news .more a {
+        display:inline-block;
+        border: 1px solid #999;
+        border-radius: 30px; /* 높이의 절반 */
+        line-height: 30px; 
+        /* 버튼은 line-height의 높이를 갖고 
+        글자도 위아래 가운데 정렬함 */
+        padding: 0 39px;

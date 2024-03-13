@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu_240207.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,200,0,0">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/menu_240207.js"></script>
+    <title>반응형 메뉴</title>
+</head>
+<body>
+    <div id="wrap">
+        <!--
+            pc버전에서 메뉴에 마우스를 올렸을때
+            menu_over
+            mobile버전에서 메뉴가 열렸을때
+            menu_open
+        -->
+        <header class="header">
+            <div class="wrapper">
+                <h1 class="logo"><a href="menu_240207_2.html">삼성꿈장학재단 samsung dream scholarship foundation</a></h1>
+                <nav class="gnb">
+                    <button class="gnb_open">
+                        <i class="material-symbols-rounded">menu</i>
+                        <span>메뉴열기</span>
+                    </button>
+                    <ul class="depth1">
+                        <li>
+                            <a href="https://www.naver.com">COMPANY</a>
+                            <ul class="depth2">
+                                <li><a href="#n">회사소개</a></li>
+                                <li><a href="#n">CEO 메시지</a></li>
+                                <li><a href="#n">연혁</a></li>
+                                <li><a href="#n">R&D</a></li>
+                                <li><a href="#n">글로벌 네트워크</a></li>
+                                <li><a href="#n">LS그룹</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://www.naver.com">BUSINESS</a>
+                            <ul class="depth2">
+                                <li><a href="#n">트랙터</a></li>
+                                <li><a href="#n">사출성형기</a></li>
+                                <li><a href="#n">특수(궤도)</a></li>
+                                <li><a href="#n">전자부품</a></li>
+                            </ul>
+                        </li>
+                        <!-- 1차메뉴를 클릭하면 모바일에서는 
+                        하위메뉴가 나타남 
+                        이때 감싸고 있는 li에 sub_open이라는 클래스 추가 -->
+                        <li>
+                            <a href="https://www.naver.com">SUSTAINABILITY</a>
+                            <ul class="depth2">
+                                <li><a href="#n">안전보건환경경영</a></li>
+                                <li><a href="#n">윤리경영</a></li>
+                                <li><a href="#n">준법경영</a></li>
+                                <li><a href="#n">인권경영</a></li>
+                                <li><a href="#n">사회공헌</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://www.naver.com">RECRUIT</a>
+                            <ul class="depth2">
+                                <li><a href="#n">채용공고</a></li>
+                                <li><a href="#n">인재상</a></li>
+                                <li><a href="#n">인사제도/복리후생</a></li>
+                                <li><a href="#n">기업문화</a></li>
+                                <li><a href="#n">직무소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://www.naver.com">PR</a>
+                            <ul class="depth2">
+                                <li><a href="#n">보도자료</a></li>
+                                <li><a href="#n">홍보영상</a></li>
+                                <li><a href="#n">소셜미디어</a></li>
+                                <li><a href="#n">CI</a></li>
+                                <li><a href="#n">공고자료</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="gnb_close">
+                        <i class="material-symbols-rounded">close</i>
+                        <span>메뉴닫기</span>
+                    </button>
+                    <!-- 메뉴를 열어서 메뉴를 보고 메뉴를 닫을 수 있어야 해서
+                    여는 버튼 > 메뉴 > 닫는 버튼 순서대로 배치되어야함 -->
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <section class="visual"></section>
+            <div class="test">
+                안<br>
+                녕<br>
+                하<br>
+                세<br>
+                요<br>
+                안<br>
+                녕<br>
+                하<br>
+                세<br>
+                요<br>
+                안<br>
+                녕<br>
+                하<br>
+                세<br>
+                요<br>
+                안<br>
+                녕<br>
+                하<br>
+                세<br>
+                요<br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

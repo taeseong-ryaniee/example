@@ -1,0 +1,66 @@
+@import url("https://cdn.jsdelivr.net/gh/sun-typeface/SUITE/fonts/variable/woff2/SUITE-Variable.css");  /* SUITE Variable */
+@import url("https://use.typekit.net/npi1rur.css");
+body{
+    font-family: 'Nobel', 'SUITE Variable', sans-serif;
+    font-size: 16px;
+    color: #1d1d1d;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.08rem;
+    word-break: break-all;}
+.wrapper {
+    width: 1280px; 
+    margin: 0 auto;}
+#wrap {
+    min-width: 1280px;}
+
+@media screen and (max-width:1024px){
+    html, body {
+        font-size: 14px;}
+    .wrapper { 
+        width: auto;
+        margin: 0 40px}
+    #wrap { 
+        min-width: 741px;}
+}
+@media screen and (max-width:740px){
+    html, body {
+        font-size: 10px;}
+    .wrapper { 
+        width: auto; 
+        margin: 0 40px;}
+    #wrap { 
+        min-width: auto;}
+
+}
+* {
+    padding: 0; /* 모든 태그의 여백삭제 */
+    margin: 0;
+    box-sizing: border-box;
+    /* padding하고 border는 넓이를 늘리는 요소인데 넓이를 늘리지 않도록 하는 속성 */
+}
+ul, ol, li { 
+    list-style: none; /* ul li앞에 동그라미 삭제 */
+}
+a { /* a태그는 파란색에 underline이 기본적으로 생성됨 */
+    text-decoration: none; /* underline 제거 */
+    color: inherit; 
+    /* 색상은 상속받아 - 파란색 말고 누군가가 상속해준 스타일을 적용  */
+}
+address, em {
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+    font-size: inherit;
+    font-weight: inherit;
+}
+/* button태그는 기본스타일 많음 */
+button {
+    background-color: transparent; /*배경투명*/
+    border: 0; /* 테두리 삭제 */
+    color: inherit; /* 브라우저가 주는 값 삭제 */
+    font-family: inherit; /* button은 서체도 바뀜 - 상속 */
+    font-size: inherit; /* button은 글자크기도 바뀜 - 상속 */
+    cursor: pointer; /* 마우스를 오버하면 손바닥 모양 */
+}

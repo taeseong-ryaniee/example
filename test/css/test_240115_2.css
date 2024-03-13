@@ -1,0 +1,63 @@
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff'); font-weight:400; font-style:normal; }
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff'); font-weight:700; font-style:normal; }
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff'); font-weight:800; font-style:normal; }
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff'); font-weight:900; font-style:normal; }
+/* 글자의 크기, 색상, 서체 등 글자 스타일은 감싸는 태그에 
+스타일을 정의할 경우 하위 태그에 스타일이 상속이 됩니다. 
+그래서 기본 글자 스타일을 모든 태그를 감싸는 body태그에 
+정의해줍니다.  
+대부분 p태그에 들어갈 글자 스타일을 body에 모두 정의해줌 */
+body {
+  font-family: 'Pretendard', serif;
+  font-size: 15px;
+  color: #3d3d3d;
+  font-weight: 400;
+  line-height: 1.25;
+  /* 행간은 배수로 정의 - 브라우저마다 기본행간이 다름 */
+}
+/* *은 와이드카드라고 해서 모든 태그를 뜻함 
+   모든 태그에서 기본적으로 적용되는 모든 여백을 삭제 
+   글자는 기본적으로 행간이 있음. 그래서 글자 위아래로 여백이 발생
+   그걸 감안하고 여백을 계산해야함. 
+   -- 극단적으로 그것도 빼 하면 X (안됨) 
+   글자의 행간이 브라우저마다 다를 수도 있음...... 
+   행간도 body태그에서 기본 정의 해줘야 합니다. 
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 홈페이지 콘텐츠 넓이를 제한하는 요소로 
+   넓이값과 여백을 통해서 좌우에 가운데 정렬함 */
+.wrapper {
+  width: 1280px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 30px;
+  color: #1d1d1d;
+  font-weight: 900;
+  text-align: center;
+  margin: 73px 0 10px 0; /* 위 - 오른쪽 - 아래 - 왼쪽 */
+}
+.sub_tit {
+  text-align: center;
+}
+h2 {
+  font-size: 25px;
+  color: #1d1d1d;
+  font-weight: 900;
+  margin: 83px 0 0 0; /* 위 - 오른쪽 - 아래 - 왼쪽 */
+}
+h3 {
+  font-size: 20px;
+  font-weight: 900;
+  /* 색상이 body에 정의된 색상과 같다면 안줘도 됨 */
+  margin: 20px 0 10px 0; /* 위 - 오른쪽 - 아래 - 왼쪽 */
+}
+p {
+  margin: 0 0 15px 0; /* 위 - 오른쪽 - 아래 - 왼쪽 */
+}
+.color_system {
+  background-color: #f4f4f4;
+}

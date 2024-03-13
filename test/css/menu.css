@@ -1,0 +1,243 @@
+@charset "utf-8";
+@import url(default.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+html, body {
+    font-family: 'Noto Sans KR', sans-serif; /* 서체 */
+    font-size: 15px; /* 크기 */
+    color: #3d3d3d; /* 글자색상 */
+    font-weight: 400; /* 글자의 두께 */
+    line-height: 1.4; /* auto */
+    word-break: keep-all; /* 단어를 묶어서 줄바꿈 */
+}
+.wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+    width: 1280px; /* 홈페이지 넓이 */
+    margin: 0 auto;  /* 가운데 정렬 */
+}
+#wrap { /* id="wrap"에 적용되는 스타일 */
+    min-width: 1280px;
+    /* PC형에서 wrapper사이즈보다 브라우저 넓이가 작을때
+       가로스크롤바가 생성되는데 오른쪽에 background가 
+       짤리는 현상이 생김.  
+       가로스크롤바가 생성되었을때도 홈페이지를 정상적으로 
+       서비스 하기 위해서 최소 넓이를 입력 */
+}
+
+/* 640px 이하일때 스타일 - 640이하는 모바일 초과는 탭  */
+@media screen and (max-width:640px){
+    html, body {
+        font-size: 13px;
+    }
+    .wrapper { 
+        width: auto; 
+        /* 모바일에서는 홈페이지의 넓이를 제한하면 안됨 
+           디바이스의 넓이에 맞춰서 꽉차게 나와야 하기 때문에 
+           그 안쪽으로 좌우 여백이 20px씩 들어가게 함. */
+        margin: 0 20px;  
+    }
+    #wrap { 
+        min-width: auto;  /* 홈페이지의 최소넓이 제한하지 않음 */
+    }
+}/*media*/
+
+.header {
+    position: absolute; /* body를 기준 */
+    left: 0;
+    top: 0;
+    z-index: 100; 
+    /* 다른 position값을 가지고 있는요소 보다 100번째쯤 위에배치 
+    숫자가 높을 수록 위에 배치 */
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.header .gnb {
+    float: right;
+}
+.header .gnb .gnb_open,
+.header .gnb .gnb_close {
+    display: none; /* pc에서는 안보임 */
+}
+/* 자식선택자
+    <nav class="gnb">
+        <ul>             ------------- .gnb>ul { }
+            <li>
+                <a href=""></a>
+                <ul></ul>       ------ .gnb>ul>li>ul {}
+            </li>
+        </ul>
+    </nav>
+    이렇게 ul안에 ul이 또 있는 경우
+    ul을 구분해서 선택하기 위해서 사용하는 방식 
+    장점 - class명을 많이 주지 않아도 됨
+    단점 - html구조가 변경되면 하나도 적용되지 않음 */
+.header .gnb>ul {
+    display: flex;
+}
+.header .gnb>ul>li {
+    width: 173px;
+    text-align: center;
+}
+.header .gnb>ul>li>a { /* 1차메뉴 스타일 */
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 100px; /* 1차메뉴의 높이만큼 */
+    display: block; /* 넓이100% */
+}
+/*
+    <li>
+        <a>1차메뉴</a>
+        <ul>2차메뉴</ul>
+    </li>
+    2차메뉴에도 마우스를 올렸을때 동일하게 1차메뉴에 오버효과를 주기위해서
+    li에 오버했을때 스타일을 적용
+
+    hover은 마우스를 오버
+    focus는 키보드로 접근했을때 선택된 상태
+*/
+.header .gnb>ul>li:hover>a,
+.header .gnb>ul>li:focus>a {
+    color: #004289;
+}
+.header .gnb>ul>li>ul {
+    margin: 16px 0 0 0;
+    display: none;
+    /* 2차메뉴는 메뉴에 마우스를 오버했을때만 나타남 */
+}
+.header .gnb>ul>li>ul>li>a { /* 2차메뉴 */
+    display: block;
+    line-height: 35px;
+    font-size: 17px;
+}
+.header .gnb>ul>li>ul>li>a:hover,
+.header .gnb>ul>li>ul>li>a:focus {
+    color: #004289;
+}
+
+/* 메뉴에 마우스를 오버했을때 스타일 */
+.header.menu_open {
+    color: #1d1d1d;
+}
+.header.menu_open::before {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 1px;
+    background-color: #ededed;
+    content: "";
+    /* header의 after에 준 배경색 때문에 border-bottom이
+    안보여서 before로 선을 그어줘야함. */
+}
+.header.menu_open::after {
+    position: absolute; /* header가 기준 */
+    left: 0;
+    top: 0; /* header 높이 아래로 */
+    z-index: -1;
+    width: 100%;
+    height: 350px;
+    background-color: #fff;
+    content: "";
+    /* header의 모든 요소를 덮게 됨
+       z-index: -1을 줘서 모든 요소 아래에 배치함 */
+}
+.header.menu_open .gnb>ul>li>ul {
+    display: block;
+    /* 숨겼던 2차메뉴 보이게 */
+}
+.visual {
+    height: 1000px;
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+}
+
+@media screen and (max-width:640px){
+    .header {
+        height: 50px;
+    }
+    .header .gnb .gnb_open {
+        display: block;
+        width: 24px; /* 아이콘사이즈 */
+        height: 24px;
+        font-size: 0; /* 기존 글자 숨김 */
+        line-height: 0;
+        background: url(../images/menu_gnb_open.svg) no-repeat center center;
+        margin-top: 15px;
+    }
+    
+    .header .gnb>ul {
+        display: none; /* 모바일에서는 메뉴는 클릭해야 보임 */
+    }
+    /* 어차피 메뉴스타일 모바일에서는 
+    안보이다가 메뉴를 클릭해야 나옴
+    그럼 메뉴를 display:none, block 
+    보이고 안보이고 상태만 변환하고
+    기본 스타일은 열린 스타일로 적용 */
+    .header.menu_mobile .gnb>ul {
+        display: block; 
+    }
+    .header.menu_mobile .gnb .gnb_close {
+        display: block;
+        width: 24px; /* 아이콘사이즈 */
+        height: 24px;
+        font-size: 0; /* 기존 글자 숨김 */
+        line-height: 0;
+        background: url(../images/menu_gnb_close.svg) no-repeat center center;
+        margin-top: 15px;
+        /* .gnb>ul보다 위에 존재해야함
+        z-index로 위로 올려야 하는데 z-index는 position값이
+        필수 */
+        position: relative;
+        z-index: 102;
+    }
+    .header.menu_mobile .gnb .gnb_open {
+        display: none;
+    }
+
+    .header .gnb>ul {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 101;
+        width: 100%;
+        height: 100vh; 
+        /* 높이를 100%를 주면 header가 position이 있어서
+        header 높이만큼만 들어감. 
+        화면을 모두 덮는 높이를 원함 -- 100vh */
+        background-color: #fff;
+        color: #1d1d1d;
+        padding: 76px 20px 0 20px;
+    }
+    .header .gnb>ul>li {
+        width: auto;
+        text-align: left;
+    }
+    .header .gnb>ul>li>a { /* 1차메뉴 스타일 */
+        font-size: 20px;
+        line-height: 45px;
+        position: relative; /* after 정렬의 기준 */
+    }
+    .header .gnb>ul>li>a::after {
+        position: absolute; /* a를 기준으로 정렬 */
+        right: 0;
+        top: 14px;
+        width: 17px; /* 아이콘 사이즈 */
+        height: 17px;
+        background: url(../images/menu_open.png) no-repeat center center;
+        content: "";
+    }
+    .header .gnb>ul>li>ul {
+        margin: 5px 0 5px 20px;
+        display: none; 
+        /* 2차메뉴는 기본 숨겨진 상태이고 
+        1차메뉴를 클릭했을때 나타남 */
+    }
+    .header .gnb>ul>li>ul>li>a { /* 2차메뉴 */
+        line-height: 30px;
+        font-size: 15px;
+        color: #3D3D3D;
+    }
+    
+    .visual {
+        height: 324px;
+    }
+}/* media */

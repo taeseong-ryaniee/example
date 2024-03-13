@@ -1,0 +1,73 @@
+@font-face { font-family:'PT'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff'); font-weight:400; font-style:normal; }
+@font-face { font-family:'PT'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff'); font-weight:900; font-style:normal; }
+body {
+    font-family: 'PT', serif;
+    font-size: 15px; 
+    color: #3d3d3d;
+    font-weight: 400;
+    line-height: 1.2;
+    word-break: keep-all;
+}
+.wrapper {
+    width: 1280px; 
+    margin: 0 auto; 
+}
+/* 태그초기화 - 태그의 기본스타일 제거 */
+* {
+    padding: 0; /* 모든 태그의 여백삭제 */
+    margin: 0;
+    box-sizing: border-box;
+    /* padding하고 border는 넓이를 늘리는 요소인데 
+       넓이를 늘리지 않도록 하는 속성 */
+}
+/* 다중선택자 쉼표로 연결한 선택자 모두에게 
+   동일한 스타일을 적용할때 사용 */
+ul, ol, li { 
+    list-style: none; /* ul li앞에 동그라미 삭제 */
+}
+
+.tit {
+    background-color: #3d3d3d;
+    color: #fff;
+    /* 배경색상을 진하게 준 경우에는 
+    그 배경색에서 사용되는 기본 글자색상을 같이 
+    지정하는게 좋음... 그래야 이해가 쉬움  */
+    padding: 70px 0 41px 0;
+    margin: 0 0 41px 0;
+}
+.tit h1 {
+    font-size: 40px;
+    font-weight: 900;
+    margin: 0 0 8px 0;
+}
+.tit p {
+    color: rgba(255, 255, 255, 0.8);
+}
+.service ul {
+    display: flex;
+    justify-content: space-between;
+}
+.service ul li {
+    background-color: #f4f4f4;
+    width: 408px;
+    height: 380px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 40px 40px 0 40px; 
+}
+.service ul li h2 {
+    font-size: 30px;
+    font-weight: 900;
+    color: #1d1d1d;
+}
+.service ul li .sub_tit {
+    font-size: 20px;
+    font-weight: 900;
+    color: #1d1d1d;
+    margin: 24px 0 24px 0;
+}
+/* h2에 있는 strong이나 p있는 strong이나 
+  모든 strong에 동일한 스타일 주기 */
+.service ul li strong {
+    color: #1489d3;
+}

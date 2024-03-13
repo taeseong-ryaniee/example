@@ -1,0 +1,93 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+body{
+    font-family: "Pretendard", sans-serif;
+    font-size: 15px;
+    color: #3d3d3d;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.75px;
+    word-break: keep-all;}
+.wrapper{ /*홈페이지 전체 페이지 넓이 제한*/
+    width: 1280px; 
+    margin: 0 auto;}
+#wrap{
+    min-width: 1280px;}
+/* id="wrap"에 적용되는 스타일(PC형 홈페이지에서 많이 사용함_*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;}
+ul, ol, li{
+    list-style: none; /* 동그라미나 구분표 없애주는것 */}
+a{ /* a태그는 파랑색 언더라인이 기본적으로 설정됨 */
+    text-decoration: none;    /* underline 제거 */
+    color: inherit; /* 다른 스타일을 상속받음 */}
+address, em{
+        font-style: normal;}
+h1, h2, h3, h4, h5, h6, strong{
+        font-size: inherit;
+        font-weight: inherit;}
+button{
+    background-color: transparent;
+    border: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    color: inherit;}
+.biz .biz_wrap{
+    margin: 80px 0 82px 0;}
+.biz h2{
+    margin-bottom: 20px;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 67.5px;
+    letter-spacing: -2.25px;
+    text-align: center;}
+.biz ul{
+    display: flex;
+    justify-content: space-between;}
+.biz ul li{
+    width: 290px;}
+.biz ul li h3{
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 30px;}
+.biz ul li p{
+    font-size: 15px;}
+.tech{
+    background: #F4F4F4;
+    height: 762px;
+    color: #FFF;}
+.tech h2{
+    padding: 80px 0 20px 0;
+    color: #3D3D3D;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 67.5px;
+    letter-spacing: -2.25px;
+    text-align: center;}
+.tech ul{
+    display: flex;
+    justify-content: space-between;}
+.tech ul li a{
+    display: inline-block;}
+.tech ul li h3{
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 52.5px;
+    letter-spacing: -1.75px;}
+.tech .newtech{
+    background-image: url(../images/tech01.png);
+    width: 620px;
+    height: 514px;
+    padding: 196px 165px 215px 165px;
+    text-align: center;} 
+.tech .safesys{
+    background-image: url(../images/tech02.png);
+    width: 620px;
+    height: 514px;
+    padding: 196px 156px 215px 156px;
+    text-align: center;} 
+
