@@ -1,0 +1,103 @@
+@import url(../css/default.css);
+
+:root {
+--black: #1d1d1d;
+--white: #fff;
+--gray: #f5f5f5;
+}
+
+.wrapper {
+    width: 100vw; 
+    max-width: 160rem;
+    margin: 0 auto;}
+
+#wrap {
+    max-width: 192rem;}
+
+body,html {
+    font-family: rockwell-nova, omnigothic, futura-pt, sans-serif;
+    font-size: 10px;
+    line-height: 1.4rem;
+    color: var(--black);
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    color: var(--white);
+    border-bottom: 0.1rem solid #666;
+}
+
+
+.header .header_top {
+    font-size: 1.6rem;
+    height: 10rem;
+    display: flex;
+    justify-content: space-evenly;}
+
+.header .header_top .tnb01,
+.header .header_top .tnb02{
+    display: flex;
+    align-items: center;
+    }
+.header .header_top .tnb01 li a,
+.header .header_top .tnb02 li a{
+    padding: 2rem;
+}
+.header .header_top .logo a img{
+    width: 10rem;
+    height: auto;
+    object-fit: cover;
+    margin-top: auto 0;
+}
+.header .gnb {
+    color: #fff;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;}
+
+.header .gnb .depth1{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+.header .gnb .depth1 li a{
+    padding: 3rem;
+    line-height: 10rem;
+}
+.header .gnb ul.depth1 .depth2{
+display: none;
+}
+
+.visual .visual_swiper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100rem;}
+/* 팝업의 높이가 됨 */
+.visual .visual_swiper .swiper-slide img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.visual .visual_swiper .popup_mob {
+    display: none;
+}
+@media screen and (width < 1440px) {
+    body,html{
+    font-size: 8px;
+    }
+}
+@media screen and (width < 1024px) {
+    body,html{
+    font-size: 5px;
+    }
+    
+
+}

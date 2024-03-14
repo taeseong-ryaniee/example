@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-4.0.0-beta.js"></script>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'dwy0rph',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/svg" href="favicon.svg">
+    <title>폴바셋 | Paul Bassett</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="wrapper">
+                <div class="header_top">
+                    <ul class="tnb01">
+                        <li>
+                            <a href="#n">문의하기</a>
+                        </li>
+                        <li>
+                            <a href="#n">채용</a>
+                        </li>
+                        <li>
+                            <a href="#n">고객센터</a>
+                        </li>
+                    </ul>
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="image/Logo.png" alt="logo">
+                        </a>
+                    </div>
+                    <ul class="tnb02">
+                        <li>
+                            <a href="#">납품문의</a>
+                        </li>
+                        <li>
+                            <a href="#">신규입점제의</a>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="gnb">
+                    <ul class="depth1">
+                        <li>
+                            <a href="#" onclick="return false;">ABOUT US</a>
+                            <ul class="depth2">
+                                <li>
+                                    <a href="#" onclick="return false;">COMPANY</a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="return false;">HISTORY</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" onclick="return false;">MENU</a>
+                            <ul class="depth2">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" onclick="return false;">STORE</a>
+                            <ul class="depth2">
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" onclick="return false;">SOCIETY</a>
+                            <ul class="depth2">
+                                <li><a href=""></a>
+                                    <a href=""></a><a href=""></a>
+                                    <a href=""></a><a href=""></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" onclick="return false;">WHAT’S NEW</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="return false;">E-SHOP</a>
+                        </li>
+                    </ul>
+                </nav>
+        </header>
+        <div id="container">
+            <section class="visual">
+                <div class="visual_swiper">
+                    <div class="popup_web">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide"><img src="image/visual_px.png" alt="비주얼01">
+                            </li>
+                            <li class="swiper-slide"><img src="image/visual_bg1.png" alt="비주얼02">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="popup_mob">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide"><img src="image/visual_m.png" alt="비주얼01">
+                            </li>
+                            <li class="swiper-slide"><img src="image/visual_m2.png" alt="비주얼02">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button>
+                    <a href="#" onclick="return false">View Brand Principle</a>
+                </button>
+            </section>
+            <footer></footer>
+        </div>
+    </div>
+</body>
+
+</html>
