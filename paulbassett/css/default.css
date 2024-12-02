@@ -61,7 +61,6 @@ html {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     user-select: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -80,7 +79,7 @@ textarea,
 button {
     border: none;
     font-size: 12px;
-    color: #727272;
+    color: inherit;
 }
 
 ul,
@@ -181,7 +180,7 @@ textarea {
 }
 
 input::-webkit-input-placeholder {
-    color: #b5b5b5;
+    color: inherit;
     font-size: 12px;
     line-height: 100%;
 }
@@ -206,9 +205,9 @@ input[type=text][disabled],
 input[type=password][disabled],
 input[type=search][disabled],
 input[type=email][disabled] {
-    background: #eaeaea;
+    background: inherit;
     border-color: #c0c0c0;
-    color: #666;
+    color: inherit
     -webkit-appearance: none;
     appearance: none;
     font-size: 12px;
